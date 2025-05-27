@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function css(strings, ...valores) {
+        const styles = strings.reduce((resultado, str, i) => {
+          return resultado + str + (valores[i] || '');
+        }, '');
+
+        // Criar hash único para className
+        const hash = 'css-' + Math.random().toString(36).substr(2, 9);
+
+        // Adicionar styles ao documento (simplificado)
+        const styleElement = document.createElement('style');
+        styleElement.textContent = `.${hash} { ${styles} }`;
+        document.head.appendChild(styleElement);
+
+        return hash;
+      }
+
+      const corPrimaria = '#007bff';
+      const tamanhoFonte = 16;
+      const className = css`
+        color: ${corPrimaria};
+        font-size: ${tamanhoFonte}px;
+        padding: 10px;
+        border-radius: 4px;
+      `;
+    </script>
+  </head>
+  <body></body>
+</html>
