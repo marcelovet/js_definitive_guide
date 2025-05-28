@@ -9,6 +9,8 @@
 // log.info`Usuário ${usuario} fez login às ${new Date()}`;
 // log.error`Falha ao processar ${arquivo}: ${erro}`;
 
+// Versão inicial - somente com funções
+
 function logger(strings, ...values) {
   const timestamp = new Date().toISOString();
   const level = values[0];
@@ -43,3 +45,5 @@ log.error`Múltiplas falhas de autenticação para o usuário ${'Fulano'} às ${
 arquivo = 'arquivo.txt';
 erro = 'Erro desconhecido';
 log.error`Falha ao processar ${arquivo}: ${erro}`;
+
+// TODO: implementar versão com classes

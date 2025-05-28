@@ -200,5 +200,56 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "BUG",
+    "ATTENTION",
+    "NOTE",
+    "HACK"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check-circle-fill",
+      "foreground": "#de955a",
+      "iconColour": "#de955a",
+      "type": "line",
+      "gutterIcon": true
+    },
+    "FIXME": {
+      "foreground": "#b3ff50",
+      "iconColour": "#b3ff50",
+      "gutterIcon": true,
+      "type": "line"
+    },
+    "ATTENTION": {
+      "icon": "alert-fill",
+      "foreground": "#9f4a2b",
+      "iconColour": "#9f4a2b",
+      "gutterIcon": true,
+      "type": "line"
+    },
+    "BUG": {
+      "icon": "bug",
+      "foreground": "#47332a",
+      "iconColour": "#47332a",
+      "gutterIcon": true,
+      "type": "line"
+    },
+    "NOTE": {
+      "icon": "note",
+      "foreground": "#2fbdbd",
+      "iconColour": "#2fbdbd",
+      "gutterIcon": true,
+      "type": "line"
+    },
+    "HACK": {
+      "icon": "codescan",
+      "foreground": "#fff",
+      "iconColour": "#fff",
+      "gutterIcon": true,
+      "type": "line"
+    }
   }
 }

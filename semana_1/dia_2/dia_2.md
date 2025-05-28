@@ -810,4 +810,3 @@ console.log(formatarNumero(1234567)); // "1.23M"
 console.log(formatarNumero(123.456, 'decimal')); // "123.46"
 console.log(formatarNumero(1234.56, 'moeda')); // "R$ 1.234,56"
 ```
-
