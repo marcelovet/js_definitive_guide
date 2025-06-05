@@ -218,6 +218,25 @@ for (let i = 1; i <= 10; i++) {
     console.log(`${i} x ${j} = ${i * j}`);
   }
 }
+
+// for in - itera sobre arrays e objetos (indices e chaves)
+const frutas = ['Pera', 'Maçã', 'Uva'];
+for (const i in frutas) {
+  console.log(i, frutas[i]);
+}
+
+const objeto = { nome: 'fulano', sobrenome: 'sicrano', idade: 22 };
+for (const i in objeto) {
+  console.log(i, objeto[i]);
+}
+
+// for of - itera sobre arrays e strings (valores)
+for (const i of frutas) {
+  console.log(i);
+}
+
+// forEach - itera sobre arrays (função callback)
+frutas.forEach((fruta) => console.log(fruta));
 ```
 
 ### **Controle de Loop - break e continue**
