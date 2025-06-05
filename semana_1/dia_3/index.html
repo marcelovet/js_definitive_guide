@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Criador de botões com contador individual
+      function criarBotaoContador(nome) {
+        let cliques = 0;
+
+        return {
+          elemento: null,
+
+          criar: function () {
+            const botao = document.createElement('button');
+            botao.textContent = `${nome}: ${cliques} cliques`;
+
+            // Event handler usa closure para acessar 'cliques'
+            botao.addEventListener('click', () => {
+              cliques++;
+              botao.textContent = `${nome}: ${cliques} cliques`;
+              console.log(`${nome} foi clicado ${cliques} vezes`);
+            });
+
+            this.elemento = botao;
+            return botao;
+          },
+
+          resetar: function () {
+            cliques = 0;
+            if (this.elemento) {
+              this.elemento.textContent = `${nome}: ${cliques} cliques`;
+            }
+          },
+
+          obterCliques: function () {
+            return cliques;
+          },
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Criador de Botões com Contador Individual</h1>
+    <div id="botao"></div>
+    <script>
+      // Cada botão mantém seu próprio contador
+      const botao1 = criarBotaoContador('Botão A');
+      const div = document.getElementById('botao');
+      div.appendChild(botao1.criar());
+    </script>
+  </body>
+</html>
