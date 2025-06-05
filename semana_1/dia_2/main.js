@@ -1,31 +1,42 @@
-// for classico
-for (let index = 0; index < 6; index++) {
-  console.log(`Linha ${index}`);
+const maior = (val1, val2) => (val1 > val2 ? val1 : val2);
+
+console.log(maior(30, 20));
+
+const ePaisagem = (largura, altura) => largura > altura;
+console.log(ePaisagem(1920, 1080));
+
+function assessFizzBuzz(value) {
+  if (typeof value !== 'number') return value;
+  if (value % 3 === 0 && value % 5 === 0) return 'FizzBuzz';
+  if (value % 3 === 0) return 'Fizz';
+  if (value % 5 === 0) return 'Buzz';
+  return value;
 }
 
-function range(start = 0, end, step = 1) {
-  return Array.from(
-    { length: Math.ceil((end - start) / step) },
-    (_, v) => start + v * step
-  );
+for (let i = 0; i < 1; i++) {
+  console.log(i, assessFizzBuzz(i));
 }
 
-console.log(range(0, 21, 2));
-
-const frutas = ['Pera', 'Maçã', 'Uva'];
-
-for (const i in frutas) {
-  console.log(i, frutas[i]);
+function createTimer() {
+  let date = new Date();
+  date.setHours(0, 0, 0, 0);
+  return {
+    get: () =>
+      date.toLocaleTimeString('pt-BR', {
+        hour12: false,
+      }),
+    add: (seconds) => {
+      date.setSeconds(date.getSeconds() + seconds);
+    },
+  };
 }
 
-const objeto = { nome: 'fulano', sobrenome: 'sicrano', idade: 22 };
+const innerTimer = createTimer();
+const timer = setInterval(() => {
+  console.log(innerTimer.get());
+  innerTimer.add(10);
+}, 1000);
 
-for (const i in objeto) {
-  console.log(i, objeto[i]);
-}
-
-for (const i of frutas) {
-  console.log(i);
-}
-
-frutas.forEach((fruta) => console.log(fruta));
+setTimeout(() => {
+  clearInterval(timer);
+}, 10000);
