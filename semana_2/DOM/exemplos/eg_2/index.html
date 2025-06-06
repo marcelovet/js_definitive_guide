@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Editor Dinâmico</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="titulo-principal">🎨 Editor Dinâmico de Página</h1>
+
+      <div class="controls">
+        <h3>Controles de Edição</h3>
+        <button id="mudar-titulo">Mudar Título</button>
+        <button id="mudar-paragrafo">Mudar Parágrafo</button>
+        <button id="destacar-texto">Destacar Texto</button>
+        <button id="adicionar-paragrafo">Adicionar Parágrafo</button>
+        <button id="resetar">Resetar Página</button>
+      </div>
+
+      <div class="content">
+        <h2 id="subtitulo">Subtítulo Original</h2>
+        <p id="paragrafo-principal">
+          Este é o parágrafo original. Clique nos botões acima para ver as
+          modificações!
+        </p>
+        <div id="area-dinamica">
+          <!-- Novos elementos aparecerão aqui -->
+        </div>
+      </div>
+
+      <div
+        style="
+          margin-top: 20px;
+          padding: 15px;
+          background: #e7f3ff;
+          border-radius: 5px;
+        "
+      >
+        <strong>🔍 Debug Info:</strong>
+        <pre id="debug-info">Informações aparecerão aqui...</pre>
+      </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

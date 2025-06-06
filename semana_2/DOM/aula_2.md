@@ -55,6 +55,17 @@ console.log(titulo.firstChild.nodeType); // 3 = Text Node
 console.log(titulo.firstChild.data); // "Cabeçalho"
 ```
 
+### Valores de `nodeType`
+
+- `1`: Elemento (Element Node) - Representa um elemento HTML, como `<div>` ou `<p>`.
+- `2`: Atributo (Attribute Node) - Representa um atributo de um elemento, como `class="active"`.
+- `3`: Texto (Text Node) - Representa o texto dentro de um elemento ou atributo.
+- `4`: CDATASection (CDATASection Node) - Representa uma seção CDATA em XML.
+- `7`: ProcessingInstruction (ProcessingInstruction Node) - Representa uma instrução de processamento em XML.
+- `8`: Comentário (Comment Node) - Representa um comentário em HTML ou XML.
+- `9`: Documento (Document Node) - Representa o documento HTML ou XML completo.
+- `10`: DocumentType (DocumentType Node) - Representa um tipo de documento, como `<!DOCTYPE html>`.
+
 ---
 
 ## 📖 Lendo e Modificando a Árvore DOM

@@ -1,7 +1,5 @@
 # 🌟 Document Object Model (DOM)
 
-Olá! Sou seu JavaScriptMentor e hoje vamos explorar um dos conceitos mais fundamentais para quem trabalha com JavaScript no navegador: o **DOM (Document Object Model)**.
-
 ## 📋 O que vamos aprender hoje?
 
 1. O que é o DOM e por que é importante
@@ -346,7 +344,7 @@ Vamos criar um exemplo que demonstra vários conceitos do DOM:
 
 ### ✅ **Boas práticas**
 
-- Sempre verificar se um elemento existe antes de manipulá-lo
+- Sempre verificar se um elemento existe antes de manipulá-lo (el === null)
 - Usar `addEventListener()` em vez de atributos HTML como `onclick`
 - Separar JavaScript do HTML para melhor organização
 
