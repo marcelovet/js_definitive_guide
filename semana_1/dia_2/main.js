@@ -40,3 +40,44 @@ const timer = setInterval(() => {
 setTimeout(() => {
   clearInterval(timer);
 }, 10000);
+
+// factory function using closures
+function createCounter(counterId) {
+  let counter = 0;
+  return {
+    // getter
+    get counter() {
+      return counter;
+    },
+    // setter
+    set counter(value) {
+      if (typeof value !== 'number') return;
+      counter = value;
+    },
+    increment: () => {
+      counter++;
+    },
+    decrement: () => {
+      counter--;
+    },
+    reset: () => {
+      counter = 0;
+    },
+    id: counterId,
+    toString() {
+      return `counter ${this.id}`;
+    },
+  };
+}
+
+let counter = createCounter(`counter 1`);
+console.log(counter.counter);
+counter.increment();
+console.log(counter.counter);
+counter.counter = 10;
+console.log(counter.counter);
+counter.decrement();
+console.log(counter.counter);
+counter.reset();
+console.log(counter.counter);
+console.log(counter.toString());
